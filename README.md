@@ -1,15 +1,43 @@
-Ein kleines VBScript, das kontinuierlich die Windows-Zwischenablage überwacht.
-Sobald eine neue Zeichenkette erkannt wird, filtert das Skript ausschließlich die enthaltenen Ziffern heraus.
+1. CleanWatcher_400_or_60.vbs
 
-Ab einer definierten Startsequenz – standardmäßig 400 – wird der restliche Zahlenstring extrahiert, zurück in die Zwischenablage kopiert und automatisch per STRG+V in das aktive Fenster eingefügt.
+Dieses Skript überwacht die Zwischenablage (Copy/Paste) auf deinem PC und prüft, ob neue Inhalte hineinkopiert wurden.
 
-Dieses Tool eignet sich ideal zur schnellen und automatisierten Weiterverarbeitung numerischer Daten, zum Beispiel aus:
+Zuerst wird nach der Zahl "400" gesucht.
+→ Wird diese gefunden, werden die Ziffern ab dieser Stelle verarbeitet und auf maximal 12 Stellen begrenzt.
 
-E-Mails,Barcodes,Scans
+Falls keine "400" gefunden wird, wird nach "60" gesucht.
+→ Wird dieser Wert gefunden, werden die Ziffern ab dieser Stelle genommen und auf maximal 13 Stellen begrenzt.
 
+Ergebnisverarbeitung:
 
-Überblick:
+In die Datei result.txt geschrieben
 
-Permanente Überwachung der Zwischenablage und automatisches Ausgeben der Zahlenfolgen.Automatisches Einfügen in das aktive Fenster (per STRG+V Funktion)
-Extraktion nur der Ziffern ohne Sonderzeichen oder Buchstaben
-Startsequenz (startPattern) frei konfigurierbar (Im script wird 400 verwendet)
+In die Datei speicher.csv eingetragen (mit Datum und Uhrzeit)
+
+In die Zwischenablage kopiert
+
+Automatisch mit STRG+V nach einem definierten Zeitintervall ausgegeben
+
+Wichtig:
+
+Jede Zahl wird nur einmal verarbeitet (kein doppeltes Einfügen)
+
+Die Überprüfung läuft in einer Endlosschleife im Hintergrund
+
+Praktischer Nutzen:
+
+Bereinigte Zahlenwerte werden direkt in einer CSV-Datei gespeichert, was den Zugriff auf Kassenzeichen erleichtert, insbesondere wenn Fachanwendungen keine eigene History-Funktion bieten.
+
+2. RemoveSpacesAndLog.vbs
+
+Dieses Skript entfernt automatisch alle Leerzeichen aus der Windows-Zwischenablage (Input Sanitization / Character Filtering) und aktualisiert die Zwischenablage.
+
+Bereinigter Text wird zusätzlich mit Zeitstempel in history.txt gespeichert.
+
+Optional kann der bereinigte Inhalt direkt per STRG+V eingefügt werden.
+
+Praktischer Nutzen:
+
+Nützlich, wenn Fachanwendungen diese Funktion nicht oder nur teilweise integriert haben.
+
+Alle Skripte wurden mithilfe von KI erstellt und geprüft.
