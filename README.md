@@ -1,4 +1,6 @@
-1. CleanWatcher_400_or_60.vbs
+Aktueller Stand:24.10.25
+
+Zwischenablage 60 und 400.vbs
 
 Dieses Skript überwacht die Zwischenablage (Copy/Paste) auf deinem PC und prüft, ob neue Inhalte hineinkopiert wurden.
 
@@ -28,7 +30,7 @@ Praktischer Nutzen:
 
 Bereinigte Zahlenwerte werden direkt in einer CSV-Datei gespeichert, was den Zugriff auf Kassenzeichen erleichtert, insbesondere wenn Fachanwendungen keine eigene History-Funktion bieten.
 
-2. RemoveSpacesAndLog.vbs
+Leerzeichen Script:
 
 Dieses Skript entfernt automatisch alle Leerzeichen aus der Windows-Zwischenablage (Input Sanitization / Character Filtering) und aktualisiert die Zwischenablage.
 
@@ -41,3 +43,14 @@ Praktischer Nutzen:
 Nützlich, wenn Fachanwendungen diese Funktion nicht oder nur teilweise integriert haben.
 
 Alle Skripte wurden mithilfe von KI erstellt und geprüft.
+
+WICHTIG
+
+Um die Skripte zu unterbrechen, einfach die stop.vbs ausführen. Die Skripte sind als Notlösung entstanden. Wichtig: Nur unter Aufsicht ausführen.
+
+Es kann vorkommen, dass in anderen Programmen kurzzeitig Fehlfunktionen auftreten, z. B. wenn diese Daten im Zwischenspeicher verarbeiten. 
+Aktuell nur bei der Umwandlung von msg Datein in pdf. Also recht spezielles Problem.
+
+In solchen Fällen bitte stop.vbs ausführen und das betroffene Programm neu starten / neu durchlaufen lassen. 
+
+Andere Beeinträchtigungen wurden bisher nicht festgestellt.
